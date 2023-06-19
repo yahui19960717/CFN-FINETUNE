@@ -1,0 +1,14 @@
+python -m supar.cmds.vi_srl train -b \
+        --train data/train_dataenhancezsl.10000.conllu\
+        --dev data/dev.conllu \
+        --test data/dev.conllu \
+        --batch-size 400 \
+        --unk "" \
+        --epochs 60 \
+        --encoder bert \
+        --bert bert-base-chinese \
+        --seed 1 \
+        --schema BES \
+        --train_given_prd \
+        -p exp/dataenhance.zsl.10000.seed1/model \
+        -d 1
